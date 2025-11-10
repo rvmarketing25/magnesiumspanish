@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1A1A1A;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #004AAD;
+  outline-offset: 2px;
+}
+
+input:focus {
+  outline: 2px solid #004AAD;
+  outline-offset: 2px;
+}
+
+/* Remove autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: #1A1A1A;
+}
+
+/* VideoPlayer styles */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.video-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.fs-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s;
+}
+
+.fs-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.fs-btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 2px;
+}

@@ -13,7 +13,7 @@ export const isAuthValid = (): boolean => {
 };
 
 export const login = (email: string, password: string, rememberMe: boolean): boolean => {
-  if (password !== 'c789' || !email.trim()) {
+  if (password !== 'mag123' || !email.trim()) {
     return false;
   }
 
